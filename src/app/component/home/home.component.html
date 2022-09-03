@@ -1,3 +1,11 @@
+<div *ngIf="successMessage" class="alert alert-success alert-dismissible fade show mb-0" role="alert">
+  <strong>{{successMessage}}</strong>
+  <button type="button" (click)="closeSuccessMessage()" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div *ngIf="errorMessage" class="alert alert-danger alert-dismissible fade show mb-0" role="alert">
+  <strong>{{errorMessage}}</strong>
+  <button type="button" (click)="closeErrorMessage()" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
