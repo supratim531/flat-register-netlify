@@ -19,9 +19,17 @@
   <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="loading()">
+  <div id="preloader"></div>
   <app-root></app-root>
   <script>
+    var preloader = document.getElementById('preloader');
+    function loading() {
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 2000);
+    }
+
     function congratulationForRegister() {
       'use strict';
       var onlyOnKonami = false;
